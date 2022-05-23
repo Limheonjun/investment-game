@@ -1,1 +1,7 @@
+upbit:
+  base-url : https://api.upbit.com/v1
+  minute-candle-path: /candles/minutes
+  day-candle-path: /candles/days
+  week-candle-path: /candles/weeks
+  month-candle-path: /candles/months
 
