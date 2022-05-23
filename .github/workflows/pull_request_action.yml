@@ -9,7 +9,7 @@ name: Pull Request Pipeline
 
 on:
   pull_request:
-    branches: [ master, indicator-service ]
+    branches: [ master, feature/indicator-service ]
 
 permissions:
   contents: read
