@@ -9,7 +9,6 @@ import com.emgc.indicatorservice.dto.upbit.candle.response.UpbitMinuteCandleResp
 import com.emgc.indicatorservice.dto.upbit.candle.response.UpbitMonthCandleResponse
 import com.emgc.indicatorservice.dto.upbit.candle.response.UpbitWeekCandleResponse
 import com.emgc.indicatorservice.util.urlgenerator.UpbitUrlGenerator
-import mu.KLogging
 import org.springframework.core.ParameterizedTypeReference
 import org.springframework.http.MediaType
 import org.springframework.stereotype.Service
