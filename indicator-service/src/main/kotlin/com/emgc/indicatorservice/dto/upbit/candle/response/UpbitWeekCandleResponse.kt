@@ -1,8 +1,8 @@
-package com.emgc.indicatorservice.dto.upbit.response
+package com.emgc.indicatorservice.dto.upbit.candle.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-data class UpbitDayCandleResponse(
+data class UpbitWeekCandleResponse(
     val market: String,
 
     @JsonProperty(value = "candle_date_time_utc")
@@ -31,15 +31,6 @@ data class UpbitDayCandleResponse(
     @JsonProperty(value = "candle_acc_trade_volume")
     val candleAccTradeVolume: Double,
 
-    @JsonProperty(value = "prev_closing_price")
-    val prevClosingPrice: Double,
-
-    @JsonProperty(value = "change_price")
-    val changePrice: Double,
-
-    @JsonProperty(value = "change_rate")
-    val changeRate: Double,
-
-    @JsonProperty(value = "converted_trade_price")
-    val convertedTradePrice1: Double,
+    @JsonProperty(value = "first_day_of_period")
+    val firstDayOfPeriod: String
 )
