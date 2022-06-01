@@ -1,4 +1,4 @@
-package com.emgc.indicatorservice.dto.upbit.response
+package com.emgc.indicatorservice.dto.upbit.candle.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
@@ -31,5 +31,5 @@ data class UpbitMinuteCandleResponse(
     @JsonProperty(value = "candle_acc_trade_volume")
     val candleAccTradeVolume: Double,
 
-    private val unit: Int
+    val unit: Int
 )

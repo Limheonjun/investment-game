@@ -1,4 +1,4 @@
-package com.emgc.indicatorservice.dto.upbit.request
+package com.emgc.indicatorservice.dto.upbit.candle.request
 
 data class UpbitDayCandleRequest(
     val market: String = "KRW-BTC",
