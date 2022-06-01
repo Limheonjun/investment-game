@@ -1,31 +1,31 @@
 package com.emgc.indicatorservice.service.upbit
 
-import com.emgc.indicatorservice.dto.upbit.request.UpbitDayCandleRequest
-import com.emgc.indicatorservice.dto.upbit.request.UpbitMinuteCandleRequest
-import com.emgc.indicatorservice.dto.upbit.request.UpbitMonthCandleRequest
-import com.emgc.indicatorservice.dto.upbit.request.UpbitWeekCandleRequest
-import com.emgc.indicatorservice.dto.upbit.response.UpbitDayCandleResponse
-import com.emgc.indicatorservice.dto.upbit.response.UpbitMinuteCandleResponse
-import com.emgc.indicatorservice.dto.upbit.response.UpbitMonthCandleResponse
-import com.emgc.indicatorservice.dto.upbit.response.UpbitWeekCandleResponse
+import com.emgc.indicatorservice.dto.upbit.candle.request.UpbitDayCandleRequest
+import com.emgc.indicatorservice.dto.upbit.candle.request.UpbitMinuteCandleRequest
+import com.emgc.indicatorservice.dto.upbit.candle.request.UpbitMonthCandleRequest
+import com.emgc.indicatorservice.dto.upbit.candle.request.UpbitWeekCandleRequest
+import com.emgc.indicatorservice.dto.upbit.candle.response.UpbitDayCandleResponse
+import com.emgc.indicatorservice.dto.upbit.candle.response.UpbitMinuteCandleResponse
+import com.emgc.indicatorservice.dto.upbit.candle.response.UpbitMonthCandleResponse
+import com.emgc.indicatorservice.dto.upbit.candle.response.UpbitWeekCandleResponse
 
 interface UpbitCandleApiService {
 
     fun getMinuteCandle(
         unit: Int,
         request: UpbitMinuteCandleRequest
-    ): Array<UpbitMinuteCandleResponse>?
+    ): List<UpbitMinuteCandleResponse>
 
     fun getDayCandle(
         request: UpbitDayCandleRequest
-    ): Array<UpbitDayCandleResponse>?
+    ): List<UpbitDayCandleResponse>
 
     fun getWeekCandle(
         request: UpbitWeekCandleRequest
-    ): Array<UpbitWeekCandleResponse>?
+    ): List<UpbitWeekCandleResponse>
 
     fun getMonthCandle(
         request: UpbitMonthCandleRequest
-    ): Array<UpbitMonthCandleResponse>?
+    ): List<UpbitMonthCandleResponse>
 
 }
