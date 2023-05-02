@@ -8,7 +8,6 @@
 - Framework
     - Springboot
 - Language
-    - Java
     - Kotlin
 - Query
     - Jpa
@@ -16,7 +15,7 @@
 
 ## Infrastructure
 - Server
-  - Local Desktop
+  - TBD
 - APM
   - Pinpoint
 - Monitoring
