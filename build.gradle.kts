@@ -32,6 +32,8 @@ subprojects {
         implementation("org.flywaydb:flyway-core")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+        // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+        implementation("com.fasterxml.jackson.core:jackson-databind:2.14.2")
         runtimeOnly("io.micrometer:micrometer-registry-prometheus")
         runtimeOnly("mysql:mysql-connector-java")
         runtimeOnly("org.mariadb.jdbc:mariadb-java-client")

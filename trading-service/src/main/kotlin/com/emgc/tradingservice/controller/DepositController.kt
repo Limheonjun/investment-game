@@ -1,9 +1,9 @@
 package com.emgc.tradingservice.controller
 
+import com.emgc.tradingservice.enums.Currency
 import com.emgc.tradingservice.service.DepositService
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RestController
+import exchange.core2.core.common.api.reports.SingleUserReportResult
+import org.springframework.web.bind.annotation.*
 
 @RestController
 class DepositController(
@@ -11,23 +11,22 @@ class DepositController(
 ) {
     @PostMapping("/deposit")
     fun addBalance(@RequestBody balance: Balance) {
-        if(balance.currencyType == "won") {
-            depositService.addBalanceWon(
-                userId = balance.userId,
-                amount = balance.amount
-            )
-        } else {
-            depositService.addBalanceLimvestment(
-                userId = balance.userId,
-                amount = balance.amount
-            )
-        }
+        depositService.addBalance(
+            userId = balance.userId,
+            amount = balance.amount,
+            currency = balance.currencyType
+        )
+    }
 
+    @GetMapping("/deposit/users/{userId}")
+    fun getBalance(@PathVariable userId: Long): SingleUserReportResult {
+        val result = depositService.checkBalance(userId).get()
+        return result
     }
 }
 
 data class Balance(
     val userId: Long,
     val amount: Long,
-    val currencyType: String
+    val currencyType: Currency
 )
