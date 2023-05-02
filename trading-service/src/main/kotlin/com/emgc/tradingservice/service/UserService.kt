@@ -8,7 +8,11 @@ import org.springframework.stereotype.Service
 class UserService(
     private val exchangeCore: ExchangeCore
 ) {
-    fun createUser(id: Long) {
+    fun initUser() {
+        createUser(1)
+        createUser(2)
+    }
+    private fun createUser(id: Long) {
         val user = ApiAddUser.builder()
             .uid(id)
             .build()
